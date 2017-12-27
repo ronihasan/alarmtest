@@ -56,36 +56,48 @@
             app.initialize();
 
             document.addEventListener('deviceready', function () {
-                // set wakeup timer
-                window.wakeuptimer.wakeup(successCallback,
-                        errorCallback,
-                        // a list of alarms to set
-                                {
-                                    alarms: [{
-                                            type: 'onetime',
-                                            time: {hour: 15, minute: 47},
-                                            extra: {message: 'json containing app-specific information to be posted when alarm triggers'},
-                                            message: 'Alarm has expired!'
-                                        }]
-                                }
-                        );
-                    }, false);
 
-            // example of a callback method
-            var successCallback = function (result) {
-                alert('Succs');
-                if (result.type === 'wakeup') {
-                    console.log('wakeup alarm detected--' + result.extra);
-                } else if (result.type === 'set') {
-                    console.log('wakeup alarm set--' + result);
-                } else {
-                    console.log('wakeup unhandled type (' + result.type + ')');
-                }
-            };
-            
-            var errorCallback = function (result) {
-                alert('Error');
-            };
+                cordova.plugins.notification.local.hasPermission(function (granted) {
+                    // console.log('Permission has been granted: ' + granted);
+                });
+
+                cordova.plugins.notification.local.registerPermission(function (granted) {
+                    // console.log('Permission has been granted: ' + granted);
+                });
+
+                // Schedule notification for tomorrow to remember about the meeting
+                cordova.plugins.notification.local.schedule({
+                    id: 10,
+                    title: "Meeting in 15 minutes!",
+                    text: "Jour fixe Produktionsbesprechung",
+                    //at: tomorrow_at_8_45_am,
+                    trigger: { at: new Date(2017, 12, 27, 11) },
+                    data: {meetingId: "#123FG8"}
+                });
+
+                // Join BBM Meeting when user has clicked on the notification 
+                cordova.plugins.notification.local.on("click", function (notification) {
+//                    if (notification.id == 10) {
+//                        joinMeeting(notification.data.meetingId);
+//                    }.
+                    alert(notification.text);
+                });
+
+                // Notification has reached its trigger time (Tomorrow at 8:45 AM)
+                cordova.plugins.notification.local.on("trigger", function (notification) {
+                    if (notification.id != 10)
+                        return;
+
+                    // After 10 minutes update notification's title 
+                    setTimeout(function () {
+                        cordova.plugins.notification.local.update({
+                            id: 10,
+                            title: "Meeting in 5 minutes!"
+                        });
+                    }, 600000);
+                });
+
+            }, false);
         </script>
     </body>
 

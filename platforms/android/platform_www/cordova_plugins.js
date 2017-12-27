@@ -389,14 +389,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-wakeuptimer-jk.Wakeup",
-    "file": "plugins/cordova-plugin-wakeuptimer-jk/www/wakeup.js",
-    "pluginId": "cordova-plugin-wakeuptimer-jk",
-    "clobbers": [
-      "wakeuptimer"
-    ]
-  },
-  {
     "id": "cordova-plugin-file-transfer.FileTransferError",
     "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
     "pluginId": "cordova-plugin-file-transfer",
@@ -427,6 +419,33 @@ module.exports = [
     "clobbers": [
       "window.Media"
     ]
+  },
+  {
+    "id": "fsr-plugin-localnotification.LocalNotification",
+    "file": "plugins/fsr-plugin-localnotification/www/local-notification.js",
+    "pluginId": "fsr-plugin-localnotification",
+    "clobbers": [
+      "cordova.plugins.notification.local",
+      "plugin.notification.local"
+    ]
+  },
+  {
+    "id": "fsr-plugin-localnotification.LocalNotification.Core",
+    "file": "plugins/fsr-plugin-localnotification/www/local-notification-core.js",
+    "pluginId": "fsr-plugin-localnotification",
+    "clobbers": [
+      "cordova.plugins.notification.local.core",
+      "plugin.notification.local.core"
+    ]
+  },
+  {
+    "id": "fsr-plugin-localnotification.LocalNotification.Util",
+    "file": "plugins/fsr-plugin-localnotification/www/local-notification-util.js",
+    "pluginId": "fsr-plugin-localnotification",
+    "merges": [
+      "cordova.plugins.notification.local.core",
+      "plugin.notification.local.core"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -444,9 +463,10 @@ module.exports.metadata =
   "cordova-plugin-geolocation": "2.1.0",
   "cordova-plugin-globalization": "1.0.9",
   "cordova-plugin-inappbrowser": "1.3.0",
-  "cordova-plugin-wakeuptimer-jk": "1.1.2",
   "cordova-plugin-file-transfer": "1.5.1",
-  "cordova-plugin-media": "2.2.0"
+  "cordova-plugin-media": "2.2.0",
+  "cordova-plugin-app-event": "1.2.1",
+  "fsr-plugin-localnotification": "0.8.4"
 };
 // BOTTOM OF METADATA
 });

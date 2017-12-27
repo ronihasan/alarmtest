@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "fsr-plugin-localnotification",
+        "scope": null,
+        "escapedName": "fsr-plugin-localnotification",
+        "name": "fsr-plugin-localnotification",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\MOBROOT\\alarmtest"
+    ]
+  ],
+  "_from": "fsr-plugin-localnotification@latest",
+  "_id": "fsr-plugin-localnotification@0.8.4",
+  "_inCache": true,
+  "_location": "/fsr-plugin-localnotification",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/fsr-plugin-localnotification-0.8.4.tgz_1485294965560_0.0988412112928927"
+  },
+  "_npmUser": {
+    "name": "jbyrdevans",
+    "email": "jason.a.evans@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "fsr-plugin-localnotification",
+    "scope": null,
+    "escapedName": "fsr-plugin-localnotification",
+    "name": "fsr-plugin-localnotification",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/fsr-plugin-localnotification/-/fsr-plugin-localnotification-0.8.4.tgz",
+  "_shasum": "c35f35b6218eefadf022472bd05facb8d0c930bf",
+  "_shrinkwrap": null,
+  "_spec": "fsr-plugin-localnotification",
+  "_where": "D:\\MOBROOT\\alarmtest",
+  "author": {
+    "name": "Sebastián Katzer"
+  },
+  "bugs": {
+    "url": "https://github.com/jbyrdevans/fsr-plugin-local-notifications/issues"
+  },
+  "dependencies": {
+    "cordova-plugin-app-event": ">=1.1.0",
+    "cordova-plugin-device": "*"
+  },
+  "description": "Schedules and queries for local notifications",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "c35f35b6218eefadf022472bd05facb8d0c930bf",
+    "tarball": "https://registry.npmjs.org/fsr-plugin-localnotification/-/fsr-plugin-localnotification-0.8.4.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.6.0"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.3.0"
+    }
+  ],
+  "gitHead": "9cc1d31a724ea88784040642adb51568bbdbaaf9",
+  "homepage": "https://github.com/jbyrdevans/fsr-plugin-local-notifications#readme",
+  "keywords": [
+    "fsr",
+    "notification",
+    "local notification",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "jbyrdevans",
+      "email": "jason.a.evans@gmail.com"
+    }
+  ],
+  "name": "fsr-plugin-localnotification",
+  "optionalDependencies": {},
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbyrdevans/fsr-plugin-local-notifications.git"
+  },
+  "scripts": {},
+  "version": "0.8.4"
+}
